@@ -13,9 +13,12 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 
 h1,
@@ -60,12 +63,6 @@ ol {
   white-space: nowrap;
 }
 
-.page {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-}
-
 .content {
  display: grid;
  align-items: flex-end;
@@ -78,7 +75,7 @@ ol {
 /* Cекция result-------------------------------*/
 .result {
   grid-area: main;
-  block-size: 456px;
+  block-size: auto;
 } 
 
 .result__video-container {
@@ -104,7 +101,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed', Arial, sans-serif;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
@@ -129,13 +126,15 @@ ol {
 
 .search-form__label-text {
   margin-left: 5px;
-  font-family: Fira Sans Condensed, Arial, sans-serif;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
 
-.search-form__label-text:hover {
-  text-decoration: underline 2px #fff;
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
 }
 
 .search-form__textfield {
@@ -194,12 +193,6 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__label-text {
-  margin-left: 5px;
-  font-family: Fira Sans Condensed, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-}
 /* Cекция content_details----------------------*/
 
 .content__details {
@@ -210,17 +203,16 @@ ol {
 
 .title {
   margin-bottom: 26px;
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
   width: 260px;
-  height: 210px;
 }
 
 .content__accent {
-  color: rgba(255, 255, 255, 0.5)
+  color: rgba(84, 80, 80, 1);
 }
 
 .content__list-container {
@@ -282,11 +274,15 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 196px;
 }
 
 .content__video-card-description {
@@ -295,7 +291,7 @@ ol {
   line-clamp: 4;
   -webkit-box-orient: vertical; 
   text-overflow: ellipsis;
-  font-family: Fira Sans Condensed, Arial, sans-serif;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-align: left;
@@ -309,7 +305,7 @@ ol {
   outline: none;
   background-color: transparent;
   color: #fff;
-  font-family: Fira Sans Condensed, Arial, sans-serif;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
